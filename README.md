@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Pablo Antonio Hernández (@safteinzz)
 - 👀 I’m interested in programing artificial intelligence, automation and hacking. But I find fun in anything related to IT really.
-- 🌱 I’m currently working as a python programmer and finishing my degree on computing engineering
+- 🌱 I’m currently working as a python fullstack developer while finishing my degree on computing engineering
 - 💞️ I’m looking to collaborate, contact me
 - 📫 How to reach me -> pablohernandezcontacto@gmail.com
 
