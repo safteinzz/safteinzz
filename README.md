@@ -2,7 +2,9 @@
 <h4 align="center">Infra & DevOps · Fullstack Developer &nbsp;·&nbsp; 🇪🇸 Spain</h4>
 
 <p align="center">
-  <a href="https://linkedin.com/in/pabloahh"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"/></a>
+  <a href="https://github.com/safteinzz"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/></a>
+  <a href="https://gitlab.com/safteinzz"><img src="https://img.shields.io/badge/GitLab-FC6D26?style=flat-square&logo=gitlab&logoColor=white"/></a>
+  <a href="https://linkedin.com/in/pabloahh"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square"/></a>
   <a href="https://stackoverflow.com/users/4757604"><img src="https://img.shields.io/badge/Stack%20Overflow-F58025?style=flat-square&logo=stackoverflow&logoColor=white"/></a>
   <a href="mailto:pablohernandezcontacto@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white"/></a>
   <img src="https://komarev.com/ghpvc/?username=safteinzz&style=flat-square&color=6e40c9&label=visitors"/>
@@ -11,7 +13,7 @@
 ---
 
 ```yaml
-company:   b2b-aero        # where I spend my days
+company:   b2b-aero         # where I spend my days
 editor:    neovim + vscode  # yes, both
 os:        debian           # debian forever
 learning:  rust
