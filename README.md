@@ -14,9 +14,10 @@
 
 ```yaml
 company:   b2b-aero         # where I spend my days
-editor:    neovim + vscode  # yes, both
+editor:    vim + vscode     # yes, both
 os:        debian           # debian forever
 learning:  rust
+homelab:   always on        # self-hosted everything
 ```
 
 ---
@@ -53,6 +54,9 @@ learning:  rust
 ![WireGuard](https://img.shields.io/badge/WireGuard-88171A?style=flat-square&logo=wireguard&logoColor=white)
 ![Pi-hole](https://img.shields.io/badge/Pi--hole-96060C?style=flat-square&logo=pi-hole&logoColor=white)
 ![Unbound](https://img.shields.io/badge/Unbound-009BDE?style=flat-square&logoColor=white)
+![Matrix](https://img.shields.io/badge/Matrix-000000?style=flat-square&logo=matrix&logoColor=white)
+![Authelia](https://img.shields.io/badge/Authelia-E3170D?style=flat-square&logoColor=white)
+![Homer](https://img.shields.io/badge/Homer-3085D6?style=flat-square&logoColor=white)
 
 **Practices** &nbsp;
 ![Unit Testing](https://img.shields.io/badge/Unit%20Testing-6DB33F?style=flat-square&logoColor=white)
@@ -61,11 +65,47 @@ learning:  rust
 
 ---
 
-### 📊 Stats
+### 🏠 Homelab
+
+> Self-hosted, self-managed, self-inflicted. Running my own infrastructure because the cloud is just someone else's computer.
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                      HOMELAB STACK                      │
+├──────────────────────┬──────────────────────────────────┤
+│  🌐 Network          │  WireGuard VPN · Pi-hole         │
+│                      │  Unbound (recursive DNS)         │
+├──────────────────────┼──────────────────────────────────┤
+│  💬 Comms            │  Matrix (Synapse) · Matrix Admin │
+├──────────────────────┼──────────────────────────────────┤
+│  🔐 Auth & Access    │  Authelia (2FA/SSO)              │
+├──────────────────────┼──────────────────────────────────┤
+│  📋 Dashboard        │  Homer                           │
+├──────────────────────┼──────────────────────────────────┤
+│  📚 Docs             │  Docusaurus                      │
+└──────────────────────┴──────────────────────────────────┘
+```
+
+**Self-hosted services** &nbsp;
+![Matrix](https://img.shields.io/badge/Matrix-000000?style=flat-square&logo=matrix&logoColor=white)
+![WireGuard](https://img.shields.io/badge/WireGuard-88171A?style=flat-square&logo=wireguard&logoColor=white)
+![Pi-hole](https://img.shields.io/badge/Pi--hole-96060C?style=flat-square&logo=pi-hole&logoColor=white)
+![Unbound](https://img.shields.io/badge/Unbound-009BDE?style=flat-square&logoColor=white)
+![Authelia](https://img.shields.io/badge/Authelia-E3170D?style=flat-square&logoColor=white)
+![Homer](https://img.shields.io/badge/Homer-3085D6?style=flat-square&logoColor=white)
+![Docusaurus](https://img.shields.io/badge/Docusaurus-3ECC5F?style=flat-square&logo=docusaurus&logoColor=white)
+
+- 💬 **[Matrix (Synapse)](https://github.com/element-hq/synapse) + [Matrix Admin](https://github.com/Awesome-Technologies/synapse-admin)** — self-hosted chat server with full federation
+- 🔒 **[WireGuard](https://github.com/WireGuard/wireguard-tools)** — personal VPN mesh network across all nodes
+- 🛡️ **[Pi-hole](https://github.com/pi-hole/pi-hole) + [Unbound](https://github.com/NLnetLabs/unbound)** — network-wide ad blocking with recursive DNS (no upstream resolver)
+- 🔐 **[Authelia](https://github.com/authelia/authelia)** — SSO and 2FA gateway in front of all exposed services
+- 🏠 **[Homer](https://github.com/bastienwirtz/homer)** — clean dashboard for all homelab services
+- 📚 **[Docusaurus](https://github.com/facebook/docusaurus)** — self-hosted personal/project documentation site
+
+---
 
 <p align="center">
-  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=safteinzz&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true"/>
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs?username=safteinzz&layout=compact&theme=tokyonight&hide_border=true"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=safteinzz&theme=tokyo-night&hide_border=true&area=true"/>
 </p>
 
 <p align="center">
