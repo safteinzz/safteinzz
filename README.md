@@ -17,7 +17,7 @@ company:   b2b-aero         # where I spend my days
 editor:    vim + vscode     # yes, both
 os:        debian           # debian forever
 learning:  rust
-homelab:   always on        # self-hosted everything, but mail obviously
+homelab:   always on        # own your data
 ```
 
 ---
