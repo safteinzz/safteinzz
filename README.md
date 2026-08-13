@@ -14,9 +14,10 @@
 
 ```yaml
 company:   b2b-aero         # where I spend my days
-editor:    vim + vscode     # yes, both
+editor:    neovim           # no plugin manager, no lazyvim, codedark + fzf
 os:        debian           # debian forever
-learning:  rust
+config:    ansible          # the whole machine, idempotent or it doesn't count
+rust:      learning         # by shipping small tools
 homelab:   always on        # own your data
 ```
 
@@ -47,6 +48,7 @@ homelab:   always on        # own your data
 
 **Infra & DevOps** &nbsp;
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
 ![GitLab CI](https://img.shields.io/badge/GitLab-FC6D26?style=flat-square&logo=gitlab&logoColor=white)
@@ -58,10 +60,35 @@ homelab:   always on        # own your data
 ![Authelia](https://img.shields.io/badge/Authelia-E3170D?style=flat-square&logoColor=white)
 ![Homer](https://img.shields.io/badge/Homer-3085D6?style=flat-square&logoColor=white)
 
+**Daily driver** &nbsp;
+![Neovim](https://img.shields.io/badge/Neovim-57A143?style=flat-square&logo=neovim&logoColor=white)
+![tmux](https://img.shields.io/badge/tmux-1BB91F?style=flat-square&logo=tmux&logoColor=white)
+![Kitty](https://img.shields.io/badge/Kitty-000000?style=flat-square&logoColor=white)
+![Starship](https://img.shields.io/badge/Starship-DD0B78?style=flat-square&logo=starship&logoColor=white)
+![KDE Plasma](https://img.shields.io/badge/KDE%20Plasma-1D99F3?style=flat-square&logo=kde&logoColor=white)
+
 **Practices** &nbsp;
 ![Unit Testing](https://img.shields.io/badge/Unit%20Testing-6DB33F?style=flat-square&logoColor=white)
 ![Code Coverage](https://img.shields.io/badge/Coverage-6DB33F?style=flat-square&logoColor=white)
 ![Docusaurus](https://img.shields.io/badge/Docusaurus-3ECC5F?style=flat-square&logo=docusaurus&logoColor=white)
+
+---
+
+### 📦 My crates
+
+> Tools I got tired of not having. All on [crates.io](https://crates.io/users/safteinzz) — `cargo install <name>`.
+
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![crates.io](https://img.shields.io/badge/crates.io-E6B14C?style=flat-square&logo=rust&logoColor=black)
+
+| crate | binary | what it does |
+|---|---|---|
+| **[sluuz](https://crates.io/crates/sluuz)** | `slu` | git, but it sleuths — a git superset with cross-repo & history superpowers |
+| **[stowe](https://crates.io/crates/stowe)** | `stowe` | git for the files git chokes on: versioned, deduped, playable backups on any remote |
+| **[whypkg](https://crates.io/crates/whypkg)** | `whypkg` | why the hell is this package here? — a fast, cross-distro package investigator |
+| **[easyssh](https://crates.io/crates/easyssh)** | `essh` | make ssh easy — hosts, keys, tunnels, mounts and copies in one tool |
+| **[easywireguard](https://crates.io/crates/easywireguard)** | `ewg` | make wireguard easy — interfaces, keys and full-mesh configs in one CLI + TUI |
+| **[vibox](https://crates.io/crates/vibox)** | `vibox` | a jukebox you exit with `:q` — a cli music player with vi motions, ex commands, and tmux manners |
 
 ---
 
