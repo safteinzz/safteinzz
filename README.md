@@ -17,6 +17,7 @@ company:   b2b-aero         # where I spend my days
 editor:    neovim           # no plugin manager, no lazyvim, codedark + fzf
 os:        debian           # debian forever
 config:    ansible          # the whole machine, idempotent or it doesn't count
+network:   openwrt          # stock openwrt on the router, fully ansible-managed
 rust:      learning         # by shipping small tools
 homelab:   always on        # own your data
 ```
@@ -49,12 +50,15 @@ homelab:   always on        # own your data
 **Infra & DevOps** &nbsp;
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
+![OpenWrt](https://img.shields.io/badge/OpenWrt-00B5E2?style=flat-square&logo=openwrt&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Podman](https://img.shields.io/badge/Podman-892CA0?style=flat-square&logo=podman&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
 ![GitLab CI](https://img.shields.io/badge/GitLab-FC6D26?style=flat-square&logo=gitlab&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
 ![WireGuard](https://img.shields.io/badge/WireGuard-88171A?style=flat-square&logo=wireguard&logoColor=white)
-![Pi-hole](https://img.shields.io/badge/Pi--hole-96060C?style=flat-square&logo=pi-hole&logoColor=white)
+![dnsmasq](https://img.shields.io/badge/dnsmasq-0A7BBB?style=flat-square&logoColor=white)
 ![Unbound](https://img.shields.io/badge/Unbound-009BDE?style=flat-square&logoColor=white)
 ![Matrix](https://img.shields.io/badge/Matrix-000000?style=flat-square&logo=matrix&logoColor=white)
 ![Authelia](https://img.shields.io/badge/Authelia-E3170D?style=flat-square&logoColor=white)
@@ -76,19 +80,19 @@ homelab:   always on        # own your data
 
 ### 📦 My crates
 
-> Tools I got tired of not having. All on [crates.io](https://crates.io/users/safteinzz) — `cargo install <name>`.
+> Tools I got tired of not having. All on [crates.io](https://crates.io/users/safteinzz) - `cargo install <name>`.
 
 ![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
 ![crates.io](https://img.shields.io/badge/crates.io-E6B14C?style=flat-square&logo=rust&logoColor=black)
 
 | crate | binary | what it does |
 |---|---|---|
-| **[sluuz](https://crates.io/crates/sluuz)** | `slu` | git, but it sleuths — a git superset with cross-repo & history superpowers |
-| **[stowe](https://crates.io/crates/stowe)** | `stowe` | git for the files git chokes on: versioned, deduped, playable backups on any remote |
-| **[whypkg](https://crates.io/crates/whypkg)** | `whypkg` | why the hell is this package here? — a fast, cross-distro package investigator |
-| **[easyssh](https://crates.io/crates/easyssh)** | `essh` | make ssh easy — hosts, keys, tunnels, mounts and copies in one tool |
-| **[easywireguard](https://crates.io/crates/easywireguard)** | `ewg` | make wireguard easy — interfaces, keys and full-mesh configs in one CLI + TUI |
-| **[vibox](https://crates.io/crates/vibox)** | `vibox` | a jukebox you exit with `:q` — a cli music player with vi motions, ex commands, and tmux manners |
+| **[sluuz](https://crates.io/crates/sluuz)** | `slu` | git, but it sleuths - a git superset with cross-repo search, secret scanning, and multi-repo management |
+| **[stowe](https://crates.io/crates/stowe)** | `stowe` | where git chokes, stowe stows - versioned, deduped big and binary files, pushed to backups you can still play (mirror) or compact blob stores (S3) |
+| **[whypkg](https://crates.io/crates/whypkg)** | `whypkg` | wonder why the f* you have that package? know it now - a fast, cross-distro package investigator (apt, pacman, dnf, flatpak) |
+| **[easyssh](https://crates.io/crates/easyssh)** | `essh` | stop typing flags, make ssh easy - hosts, keys, tunnels, mounts and file copies in one CLI + TUI |
+| **[easywireguard](https://crates.io/crates/easywireguard)** | `ewg` | mesh, minus the mess - interfaces, keys and full-mesh configs in one CLI + TUI |
+| **[vibox](https://crates.io/crates/vibox)** | `vibox` | a jukebox you exit with :q - a cli music player with vi motions, ex commands, and tmux manners |
 
 ---
 
@@ -96,16 +100,20 @@ homelab:   always on        # own your data
 
 > Self-hosted, self-managed, self-inflicted. Running my own infrastructure because the cloud is just someone else's computer.
 
+The router does the plumbing, the Pi runs the apps. Both are Ansible-managed, so the
+whole network is reproducible from the repo - the box is never the source of truth.
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                      HOMELAB STACK                      │
 ├──────────────────────┬──────────────────────────────────┤
-│  🌐 Network          │  WireGuard VPN · Pi-hole         │
-│                      │  Unbound (recursive DNS)         │
+│  📡 Router (OpenWrt) │  DHCP · DNS (dnsmasq + adblock)  │
+│                      │  Unbound (recursive · DNSSEC)    │
+│                      │  WireGuard · Cloudflare DDNS     │
 ├──────────────────────┼──────────────────────────────────┤
 │  💬 Comms            │  Matrix (Synapse) · Matrix Admin │
 ├──────────────────────┼──────────────────────────────────┤
-│  🔐 Auth & Access    │  Authelia (2FA/SSO)              │
+│  🔐 Auth & Access    │  Authelia (2FA/SSO) · cloudflared│
 ├──────────────────────┼──────────────────────────────────┤
 │  📋 Dashboard        │  Homer                           │
 ├──────────────────────┼──────────────────────────────────┤
@@ -114,20 +122,21 @@ homelab:   always on        # own your data
 ```
 
 **Self-hosted services** &nbsp;
+![OpenWrt](https://img.shields.io/badge/OpenWrt-00B5E2?style=flat-square&logo=openwrt&logoColor=white)
 ![Matrix](https://img.shields.io/badge/Matrix-000000?style=flat-square&logo=matrix&logoColor=white)
 ![WireGuard](https://img.shields.io/badge/WireGuard-88171A?style=flat-square&logo=wireguard&logoColor=white)
-![Pi-hole](https://img.shields.io/badge/Pi--hole-96060C?style=flat-square&logo=pi-hole&logoColor=white)
 ![Unbound](https://img.shields.io/badge/Unbound-009BDE?style=flat-square&logoColor=white)
 ![Authelia](https://img.shields.io/badge/Authelia-E3170D?style=flat-square&logoColor=white)
 ![Homer](https://img.shields.io/badge/Homer-3085D6?style=flat-square&logoColor=white)
 ![Docusaurus](https://img.shields.io/badge/Docusaurus-3ECC5F?style=flat-square&logo=docusaurus&logoColor=white)
 
-- 💬 **[Matrix (Synapse)](https://github.com/element-hq/synapse) + [Matrix Admin](https://github.com/Awesome-Technologies/synapse-admin)** — self-hosted chat server with full federation
-- 🔒 **[WireGuard](https://github.com/WireGuard/wireguard-tools)** — personal VPN mesh network across all nodes
-- 🛡️ **[Pi-hole](https://github.com/pi-hole/pi-hole) + [Unbound](https://github.com/NLnetLabs/unbound)** — network-wide ad blocking with recursive DNS (no upstream resolver)
-- 🔐 **[Authelia](https://github.com/authelia/authelia)** — SSO and 2FA gateway in front of all exposed services
-- 🏠 **[Homer](https://github.com/bastienwirtz/homer)** — clean dashboard for all homelab services
-- 📚 **[Docusaurus](https://github.com/facebook/docusaurus)** — self-hosted personal/project documentation site
+- 📡 **[OpenWrt](https://openwrt.org/)** - stock upstream OpenWrt flashed over the vendor firmware, not a rebadged vendor UI. Fully Ansible-managed: every setting declared as `uci` in a playbook - DHCP, DNS, firewall zones, isolated port-based subnets for work and guest devices, WireGuard and DDNS - idempotent, vault-encrypted secrets, and reproducible onto the next router from the repo alone
+- 🛡️ **[adblock](https://github.com/openwrt/packages/tree/master/net/adblock) + [Unbound](https://github.com/NLnetLabs/unbound)** - network-wide ad blocking straight into `dnsmasq` (~336k domains), resolving recursively from the root servers with DNSSEC validation, so there is no upstream resolver to trust or poison
+- 🔒 **[WireGuard](https://github.com/WireGuard/wireguard-tools)** - VPN terminating on the router itself, full-tunnel for roaming devices, with a NAT hairpin so the tunnel stays up walking in and out of the house. Peers are managed with my own [`ewg`](https://crates.io/crates/easywireguard)
+- 💬 **[Matrix (Synapse)](https://github.com/element-hq/synapse) + [Matrix Admin](https://github.com/Awesome-Technologies/synapse-admin)** - self-hosted chat server with full federation
+- 🔐 **[Authelia](https://github.com/authelia/authelia)** + **[cloudflared](https://github.com/cloudflare/cloudflared)** - SSO and 2FA in front of every exposed service, published through a Cloudflare Tunnel so nothing needs an open inbound port
+- 🏠 **[Homer](https://github.com/bastienwirtz/homer)** - clean dashboard for all homelab services
+- 📚 **[Docusaurus](https://github.com/facebook/docusaurus)** - self-hosted personal/project documentation site
 
 ---
 
