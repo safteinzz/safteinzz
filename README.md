@@ -18,7 +18,8 @@ editor:    neovim           # no plugin manager, no lazyvim, codedark + fzf
 os:        debian           # debian forever
 config:    ansible          # the whole machine, idempotent or it doesn't count
 network:   openwrt          # stock openwrt on the router, fully ansible-managed
-rust:      learning         # by shipping small tools
+rust:      shipping         # nine crates on crates.io, every one a CLI with a TUI
+agents:    canonize         # one set of rules, wired into every coding agent
 homelab:   always on        # own your data
 ```
 
@@ -27,49 +28,53 @@ homelab:   always on        # own your data
 ### 🛠 Stack
 
 **Languages** &nbsp;
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)
 ![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
 **Frontend** &nbsp;
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![React Native](https://img.shields.io/badge/React%20Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
+![React Native](https://img.shields.io/badge/React%20Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Capacitor](https://img.shields.io/badge/Capacitor-119EFF?style=flat-square&logo=capacitor&logoColor=white)
 
 **Backend** &nbsp;
 ![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
 ![ASP.NET](https://img.shields.io/badge/ASP.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)
-![Blazor](https://img.shields.io/badge/Blazor-512BD4?style=flat-square&logo=blazor&logoColor=white)
-![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)
+![Askama](https://img.shields.io/badge/Askama-000000?style=flat-square&logo=rust&logoColor=white)
+![Diesel](https://img.shields.io/badge/Diesel-000000?style=flat-square&logo=rust&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)
 
 **Infra & DevOps** &nbsp;
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Debian](https://img.shields.io/badge/Debian-A81D33?style=flat-square&logo=debian&logoColor=white)
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
-![OpenWrt](https://img.shields.io/badge/OpenWrt-00B5E2?style=flat-square&logo=openwrt&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Podman](https://img.shields.io/badge/Podman-892CA0?style=flat-square&logo=podman&logoColor=white)
-![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
 ![GitLab CI](https://img.shields.io/badge/GitLab-FC6D26?style=flat-square&logo=gitlab&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
+![OpenWrt](https://img.shields.io/badge/OpenWrt-00B5E2?style=flat-square&logo=openwrt&logoColor=white)
 ![WireGuard](https://img.shields.io/badge/WireGuard-88171A?style=flat-square&logo=wireguard&logoColor=white)
 ![dnsmasq](https://img.shields.io/badge/dnsmasq-0A7BBB?style=flat-square&logoColor=white)
 ![Unbound](https://img.shields.io/badge/Unbound-009BDE?style=flat-square&logoColor=white)
-![Matrix](https://img.shields.io/badge/Matrix-000000?style=flat-square&logo=matrix&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare_Zero_Trust-F38020?style=flat-square&logo=cloudflare&logoColor=white)
 ![Authelia](https://img.shields.io/badge/Authelia-E3170D?style=flat-square&logoColor=white)
-![Homer](https://img.shields.io/badge/Homer-3085D6?style=flat-square&logoColor=white)
+![Matrix](https://img.shields.io/badge/Matrix-000000?style=flat-square&logo=matrix&logoColor=white)
+![Homepage](https://img.shields.io/badge/Homepage-3085D6?style=flat-square&logoColor=white)
 
 **Daily driver** &nbsp;
-![Neovim](https://img.shields.io/badge/Neovim-57A143?style=flat-square&logo=neovim&logoColor=white)
-![tmux](https://img.shields.io/badge/tmux-1BB91F?style=flat-square&logo=tmux&logoColor=white)
-![Kitty](https://img.shields.io/badge/Kitty-000000?style=flat-square&logoColor=white)
-![Starship](https://img.shields.io/badge/Starship-DD0B78?style=flat-square&logo=starship&logoColor=white)
+![kanata](https://img.shields.io/badge/kanata-333333?style=flat-square&logoColor=white)
 ![KDE Plasma](https://img.shields.io/badge/KDE%20Plasma-1D99F3?style=flat-square&logo=kde&logoColor=white)
+![Kitty](https://img.shields.io/badge/Kitty-000000?style=flat-square&logoColor=white)
+![tmux](https://img.shields.io/badge/tmux-1BB91F?style=flat-square&logo=tmux&logoColor=white)
+![Starship](https://img.shields.io/badge/Starship-DD0B78?style=flat-square&logo=starship&logoColor=white)
+![Neovim](https://img.shields.io/badge/Neovim-57A143?style=flat-square&logo=neovim&logoColor=white)
 
 **Practices** &nbsp;
 ![Unit Testing](https://img.shields.io/badge/Unit%20Testing-6DB33F?style=flat-square&logoColor=white)
@@ -89,10 +94,13 @@ homelab:   always on        # own your data
 |---|---|---|
 | **[sluuz](https://crates.io/crates/sluuz)** | `slu` | git, but it sleuths - a git superset with cross-repo search, secret scanning, and multi-repo management |
 | **[stowe](https://crates.io/crates/stowe)** | `stowe` | where git chokes, stowe stows - versioned, deduped big and binary files, pushed to backups you can still play (mirror) or compact blob stores (S3) |
-| **[whypkg](https://crates.io/crates/whypkg)** | `whypkg` | wonder why the f* you have that package? know it now - a fast, cross-distro package investigator (apt, pacman, dnf, flatpak) |
 | **[easyssh](https://crates.io/crates/easyssh)** | `essh` | stop typing flags, make ssh easy - hosts, keys, tunnels, mounts and file copies in one CLI + TUI |
+| **[easysql](https://crates.io/crates/easysql)** | `esql` | getting to the sql prompt, quick and easy - saved connections, their passwords and their tunnels in one CLI + TUI |
 | **[easywireguard](https://crates.io/crates/easywireguard)** | `ewg` | mesh, minus the mess - interfaces, keys and full-mesh configs in one CLI + TUI |
-| **[vibox](https://crates.io/crates/vibox)** | `vibox` | a jukebox you exit with :q - a cli music player with vi motions, ex commands, and tmux manners |
+| **[cryptkeeper](https://crates.io/crates/cryptkeeper)** | `ck` | encryption without the fuss - lock and unlock gocryptfs folders, LUKS drives and age files in one place |
+| **[whypkg](https://crates.io/crates/whypkg)** | `whypkg` | why is that package here? know it now - a fast package investigator for your distro, flatpak, cargo, pipx, uv and npm |
+| **[canonize](https://crates.io/crates/canonize)** | `canon` | bring your rules to any coding agent - one canon of rules, conventions and skills for the agents you use |
+| **[vibox](https://crates.io/crates/vibox)** | `vibox` | a jukebox you exit with :q - a cli music player whose library is a vim buffer, nothing written until :w |
 
 ---
 
@@ -100,8 +108,8 @@ homelab:   always on        # own your data
 
 > Self-hosted, self-managed, self-inflicted. Running my own infrastructure because the cloud is just someone else's computer.
 
-The router does the plumbing, the Pi runs the apps. Both are Ansible-managed, so the
-whole network is reproducible from the repo - the box is never the source of truth.
+The router does the plumbing, a mini PC runs the apps. Both are Ansible-managed, so the
+whole network comes back from the repo alone. You can do this too, one box at a time.
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -110,39 +118,27 @@ whole network is reproducible from the repo - the box is never the source of tru
 │  📡 Router (OpenWrt) │  DHCP · DNS (dnsmasq + adblock)  │
 │                      │  Unbound (recursive · DNSSEC)    │
 │                      │  WireGuard · Cloudflare DDNS     │
+│                      │  Cloudflare Zero Trust           │
 ├──────────────────────┼──────────────────────────────────┤
 │  💬 Comms            │  Matrix (Synapse) · Matrix Admin │
 ├──────────────────────┼──────────────────────────────────┤
 │  🔐 Auth & Access    │  Authelia (2FA/SSO) · cloudflared│
 ├──────────────────────┼──────────────────────────────────┤
-│  📋 Dashboard        │  Homer                           │
+│  📋 Dashboard        │  Homepage                        │
 ├──────────────────────┼──────────────────────────────────┤
 │  📚 Docs             │  Docusaurus                      │
 └──────────────────────┴──────────────────────────────────┘
 ```
 
-**Self-hosted services** &nbsp;
-![OpenWrt](https://img.shields.io/badge/OpenWrt-00B5E2?style=flat-square&logo=openwrt&logoColor=white)
-![Matrix](https://img.shields.io/badge/Matrix-000000?style=flat-square&logo=matrix&logoColor=white)
-![WireGuard](https://img.shields.io/badge/WireGuard-88171A?style=flat-square&logo=wireguard&logoColor=white)
-![Unbound](https://img.shields.io/badge/Unbound-009BDE?style=flat-square&logoColor=white)
-![Authelia](https://img.shields.io/badge/Authelia-E3170D?style=flat-square&logoColor=white)
-![Homer](https://img.shields.io/badge/Homer-3085D6?style=flat-square&logoColor=white)
-![Docusaurus](https://img.shields.io/badge/Docusaurus-3ECC5F?style=flat-square&logo=docusaurus&logoColor=white)
-
-- 📡 **[OpenWrt](https://openwrt.org/)** - stock upstream OpenWrt flashed over the vendor firmware, not a rebadged vendor UI. Fully Ansible-managed: every setting declared as `uci` in a playbook - DHCP, DNS, firewall zones, isolated port-based subnets for work and guest devices, WireGuard and DDNS - idempotent, vault-encrypted secrets, and reproducible onto the next router from the repo alone
-- 🛡️ **[adblock](https://github.com/openwrt/packages/tree/master/net/adblock) + [Unbound](https://github.com/NLnetLabs/unbound)** - network-wide ad blocking straight into `dnsmasq` (~336k domains), resolving recursively from the root servers with DNSSEC validation, so there is no upstream resolver to trust or poison
-- 🔒 **[WireGuard](https://github.com/WireGuard/wireguard-tools)** - VPN terminating on the router itself, full-tunnel for roaming devices, with a NAT hairpin so the tunnel stays up walking in and out of the house. Peers are managed with my own [`ewg`](https://crates.io/crates/easywireguard)
-- 💬 **[Matrix (Synapse)](https://github.com/element-hq/synapse) + [Matrix Admin](https://github.com/Awesome-Technologies/synapse-admin)** - self-hosted chat server with full federation
-- 🔐 **[Authelia](https://github.com/authelia/authelia)** + **[cloudflared](https://github.com/cloudflare/cloudflared)** - SSO and 2FA in front of every exposed service, published through a Cloudflare Tunnel so nothing needs an open inbound port
-- 🏠 **[Homer](https://github.com/bastienwirtz/homer)** - clean dashboard for all homelab services
-- 📚 **[Docusaurus](https://github.com/facebook/docusaurus)** - self-hosted personal/project documentation site
+- 📡 **[OpenWrt](https://openwrt.org/)**: stock OpenWrt on the router, every setting a line of `uci` in an Ansible playbook, so the next router is one run away
+- 🛡️ **[adblock](https://github.com/openwrt/packages/tree/master/net/adblock) + [Unbound](https://github.com/NLnetLabs/unbound)**: ads blocked for every device in the house, DNS resolved from the root servers with DNSSEC, no upstream to trust
+- 🔒 **[WireGuard](https://github.com/WireGuard/wireguard-tools)**: VPN on the router itself, full tunnel for the phone. Peers managed with my own [`ewg`](https://crates.io/crates/easywireguard)
+- 💬 **[Matrix (Synapse)](https://github.com/element-hq/synapse) + [Matrix Admin](https://github.com/Awesome-Technologies/synapse-admin)**: my own chat server, federated with the rest of Matrix
+- 🔐 **[Authelia](https://github.com/authelia/authelia)** + **[cloudflared](https://github.com/cloudflare/cloudflared)**: SSO and 2FA in front of the web apps, published through a Cloudflare Tunnel, so no app needs an open port
+- 📋 **[Homepage](https://github.com/gethomepage/homepage)**: one dashboard for all of it, also the browser's new tab page
+- 📚 **[Docusaurus](https://github.com/facebook/docusaurus)**: my own docs site
 
 ---
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=safteinzz&theme=tokyo-night&hide_border=true&area=true"/>
-</p>
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=safteinzz&theme=tokyonight&hide_border=true"/>
